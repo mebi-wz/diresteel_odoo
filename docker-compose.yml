@@ -17,13 +17,13 @@ services:
 
     volumes:
       - dp_diresteel_odoo19-web-data:/var/lib/odoo
-      - .:/mnt/nesredin_spare_part:rw
+      - .:/mnt/diresteel_spare_part:rw
       - ./odoo.conf:/etc/odoo/odoo.conf:ro
 
     environment:
       HOST: db19
-      USER: odoo_nesredin
-      PASSWORD: odoo_nesredin
+      USER: odoo_diresteel
+      PASSWORD: odoo_diresteel
 
     restart: unless-stopped
 
@@ -37,8 +37,8 @@ services:
 
     environment:
       POSTGRES_DB: postgres
-      POSTGRES_USER: odoo_nesredin
-      POSTGRES_PASSWORD: odoo_nesredin
+      POSTGRES_USER: odoo_diresteel
+      POSTGRES_PASSWORD: odoo_diresteel
 
     volumes:
       - dp_diresteel_odoo19-db-data:/var/lib/postgresql/data
